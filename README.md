@@ -15,8 +15,8 @@ Installation
 
 ```bash
 
-git clone https://github.com/yourusername/your-repo.git
-cd your-repo
+git clone https://github.com/denisganga/django-daraja-API.git
+cd django-daraja-API
 ```
 
 ### 2) Create a virtual environment:
