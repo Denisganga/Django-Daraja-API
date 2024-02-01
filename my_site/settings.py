@@ -146,8 +146,8 @@ MPESA_ENVIRONMENT = 'sandbox'
 
 # Credentials for the daraja app
 
-MPESA_CONSUMER_KEY = 'wihoqx5h6kOBs6672SlLBEdKmZPZr2xPjlzOn4TEYxyZ0eMP'
-MPESA_CONSUMER_SECRET = 'r3xsVwZuGvFJSGTEAgvjnlqWCZbGS7qi2Mg6V5uAzBa6r6y7aqQbCoWHmTsteauU'
+MPESA_CONSUMER_KEY = ''
+MPESA_CONSUMER_SECRET = ''
 
 #Shortcode to use for transactions. For sandbox  use the Shortcode 1 provided on test credentials page
 
@@ -170,7 +170,7 @@ MPESA_SHORTCODE_TYPE = 'paybill'
 # Sandbox passkey is available on test credentials page
 # Production passkey is sent via email once you go live
 
-MPESA_PASSKEY = 'bfb279f9aa9bdbcf158e97dd71a467cd2e0c893059b10f78e6b72ada1ed2c919'
+MPESA_PASSKEY = ''
 
 # Username for initiator (to be used in B2C, B2B, AccountBalance and TransactionStatusQuery Transactions)
 

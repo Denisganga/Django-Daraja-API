@@ -8,7 +8,14 @@ from django_daraja.mpesa.core import MpesaClient
 def index(request):
     if request.method=='POST':
         phone_number=request.POST.get('phone_number')
-        amount=request.POST.get('amount')
+        amount_str=request.POST.get('amount')
+
+        try:
+            amount=int(amount_str)
+
+        except ValueError:
+            return HttpResponse("Error.Please enter a valid amount")
+
 
         if phone_number and amount:
             cl = MpesaClient()
