@@ -1,0 +1,30 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STK Push Payment</title>
+    <link rel="stylesheet" type="text/css" href="{% static ' css/styles.css' %}">
+</head>
+<body>
+
+<div class="card">
+    <div class="card-body">
+        <h2>STK Push Example</h2>
+        <form method="post" action="{% url 'index' %}">
+            {% csrf_token %}
+            <label for="phone_number">Enter Phone Number:</label>
+            <input type="text" name="phone_number" required><br>
+
+            <label for="amount">Enter Amount:</label>
+            <input type="text" name="amount" required><br>
+
+            <input type="submit" value="Pay">
+        </form>
+    </div>
+</div>
+
+</body>
+</html>
