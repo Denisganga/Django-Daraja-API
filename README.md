@@ -1,6 +1,6 @@
-#Django STK Push Integration
+# Django STK Push Integration
 
-##overview
+## overview
 
 This Django application demonstrates the integration of Safaricom's M-Pesa Daraja API to initiate an STK Push. STK (Sim Toolkit) Push is a feature provided by Safaricom that allows merchants to initiate M-Pesa transactions on behalf of customers.
 
