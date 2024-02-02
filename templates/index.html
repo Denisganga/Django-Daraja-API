@@ -8,13 +8,20 @@
     <title>STK Push Payment</title>
     <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
 
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.20/dist/sweetalert2.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.20/dist/sweetalert2.all.min.js"></script> 
+
+
+
 </head>
 <body>
 
 <div class="card">
     <div class="card-body">
         <h2>STK Push Example</h2>
-        <form method="post" action="{% url 'index' %}">
+        <form method="post" action="{% url 'index' %}" onsubmit="return showPopup()">
+
             {% csrf_token %}
             <label for="phone_number">Enter Phone Number:</label>
             <input type="text" name="phone_number" required><br>
@@ -26,6 +33,35 @@
         </form>
     </div>
 </div>
+
+<script>
+    function showPopup() {
+        // Get the phone number and amount
+        var phone_number = document.getElementsByName("phone_number")[0].value;
+        var amount = document.getElementsByName("amount")[0].value;
+
+        // Check if both phone number and amount are provided
+        if (phone_number && amount) {
+            // Show a SweetAlert2 success modal
+            Swal.fire({
+                icon: 'success',
+                title: 'Check your phone',
+                text: 'Enter your M-Pesa PIN to Confirm.',
+                confirmButtonText: 'OK',
+            });
+        } else {
+            // Show a SweetAlert2 error modal for missing information
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'Please enter both the phone number and amount.',
+            });
+        }
+
+        // Prevent the form from submitting
+        return false;
+    }
+</script>
 
 </body>
 </html>
