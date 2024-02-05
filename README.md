@@ -17,6 +17,8 @@ Python (version 3.11.7)
 Django (version 3.2.20)
 Django-daraja(version 2.0)
 
+a `requirement.txt` is provided for dependancies
+
 Installation
 
 ### 1) Clone the repository:
@@ -31,7 +33,7 @@ cd django-daraja-API
 
 ```bash
 
-python -m venv venv
+python3 -m venv myenvenv
 
 ```
 
@@ -41,14 +43,14 @@ python -m venv venv
 
 ```bash
 
-source venv/bin/activate
+source myenv/bin/activate
 ```
 
 On Windows:
 
 ```bash
 
-    .\venv\Scripts\activate
+    myenv/scripts/activate
 ```
 
 ### 4) Install dependencies:
@@ -67,14 +69,14 @@ pip install -r requirements.txt
 
 ```bash
 
-python manage.py migrate
+python3 manage.py migrate
 ```
 
 ### 7) Run the development server:
 
 ```bash
 
-    python manage.py runserver
+    python3 manage.py runserver
 ```
 
 ### 8) Usage
