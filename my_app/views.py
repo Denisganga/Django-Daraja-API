@@ -31,6 +31,7 @@ def index(request):
             data_to_hash = f"{business_short_code}{settings.MPESA_PASSKEY}".encode('utf-8') #combined according to doc
             hashed_data = hashlib.sha256(data_to_hash).hexdigest() #here we have been hashing the data
             password= base64.b64encode(bytes.fromhex(hashed_data)).decode('utf-8')
+            partyb=""
 
             response = cl.stk_push(
                 phone_number,
