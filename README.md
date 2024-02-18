@@ -1,3 +1,5 @@
+![Daraja logo](logo.png "Daraja logo")
+
 # Django STK Push Integration
 
 ## overview
